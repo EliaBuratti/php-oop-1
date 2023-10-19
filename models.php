@@ -7,8 +7,8 @@ include __DIR__ . '/db.php';
 class Movies
 {
     public $title;
-    public $actors;
-    public $genre;
+    public $actors = [];
+    public $genres = [];
     public $duration;
 
 
@@ -24,20 +24,10 @@ class Movies
 
     public function addGenre($_genre)
     {
-        if ($this->genre) {
-
-            $this->genre .= ', ' . $_genre;
-        } else {
-            $this->genre .= '' . $_genre;
-        }
+        array_push($this->genres, $_genre);
     }
     public function addActor($_actors)
     {
-        if ($this->actors) {
-
-            $this->actors .= ', ' . $_actors;
-        } else {
-            $this->actors .= '' . $_actors;
-        }
+        array_push($this->actors, $_actors);
     }
 };

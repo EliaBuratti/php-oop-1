@@ -6,6 +6,7 @@ $movieList = [
     $film_2 = new Movies('Batman'),
 ];
 
+
 $film_1->addGenre('adventure');
 $film_1->duration = 150;
 $film_1->addGenre('heroes');
@@ -18,3 +19,5 @@ $film_2->addGenre('thriller');
 $film_2->addGenre('adventure');
 $film_2->duration = 210;
 $film_2->addActor('cristian bale');
+
+//var_dump($movieList);

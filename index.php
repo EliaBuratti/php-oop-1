@@ -28,7 +28,7 @@ include __DIR__ . '/models.php';
                     <tr>
                         <th scope="col">Title</th>
                         <th scope="col">Actors</th>
-                        <th scope="col">Genre</th>
+                        <th scope="col">Genres</th>
                         <th scope="col">Duration</th>
                     </tr>
                 </thead>
@@ -36,9 +36,24 @@ include __DIR__ . '/models.php';
 
                     <?php foreach ($movieList as $movie) : ?>
                         <tr class="text-capitalize">
+
+                            <!-- title -->
                             <td> <?= $movie->title ?> </td>
-                            <td> <?= $movie->actors ?> </td>
-                            <td><?= $movie->genre ?></td>
+
+                            <!-- actors -->
+                            <td>
+                                <?php foreach ($movie->actors as $actor) {
+                                    echo $actor . ' ';
+                                } ?>
+                            </td>
+                            <!-- genres -->
+                            <td>
+                                <?php foreach ($movie->genres as $genre) {
+                                    echo $genre . ' ';
+                                } ?>
+                            </td>
+
+                            <!-- duration -->
                             <td><?= $movie->duration ?> minuti</td>
                         </tr>
                     <?php endforeach ?>
