@@ -1,24 +1,7 @@
 <?php
-class Movie
-{
-    public $title;
-    public $genre;
-    public $duration;
+include __DIR__ . '/db.php';
+include __DIR__ . '/models.php';
 
-    function __construct($_title)
-    {
-        $this->title = $_title;
-    }
-
-    public function getTitle()
-    {
-        return $this->title;
-    }
-}
-
-$spiderman = new Movie('Spiderman');
-$spiderman->genre = 'adventure';
-$spiderman->duration = 150;
 
 ?>
 
@@ -32,14 +15,29 @@ $spiderman->duration = 150;
 </head>
 
 <body>
+
     <h1>Titolo:
         <?= $spiderman->getTitle() ?>
     </h1>
     <p>Durata:
         <?= $spiderman->duration ?>
+        minuti
     </p>
     <p>Genere:
         <?= $spiderman->genre ?>
+    </p>
+
+
+
+    <h1>Titolo:
+        <?= $batman->getTitle() ?>
+    </h1>
+    <p>Durata:
+        <?= $batman->duration ?>
+        minuti
+    </p>
+    <p>Genere:
+        <?= $batman->genre ?>
     </p>
 
 </body>
