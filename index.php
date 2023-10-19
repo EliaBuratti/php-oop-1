@@ -1,5 +1,10 @@
 <?php
-include __DIR__ . '/models.php';
+
+define('ROOT', __DIR__);
+define('DS', DIRECTORY_SEPARATOR);
+
+include ROOT  . DS . 'models.php';
+include ROOT  . DS . 'db.php';
 
 ?>
 
