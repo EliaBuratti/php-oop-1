@@ -1,41 +1,20 @@
 <?php
 
-include __DIR__ . '/models.php';
+//lista dei film
+$movieList = [
+    $film_1 = new Movies('Spiderman'),
+    $film_2 = new Movies('Batman'),
+];
 
-class Movies
-{
-    public $title;
-    public $actors;
-    public $genre;
-    public $duration;
+$film_1->addGenre('adventure');
+$film_1->duration = 150;
+$film_1->addGenre('heroes');
+$film_1->addActor('tom holland');
 
 
-    function __construct($_title)
-    {
-        $this->title = $_title;
-    }
 
-    public function getTitle()
-    {
-        return $this->title;
-    }
-
-    public function addGenre($_genre)
-    {
-        if ($this->genre) {
-
-            $this->genre .= ', ' . $_genre;
-        } else {
-            $this->genre .= '' . $_genre;
-        }
-    }
-    public function addActor($_actors)
-    {
-        if ($this->actors) {
-
-            $this->actors .= ', ' . $_actors;
-        } else {
-            $this->actors .= '' . $_actors;
-        }
-    }
-};
+$film_2->addGenre('action');
+$film_2->addGenre('thriller');
+$film_2->addGenre('adventure');
+$film_2->duration = 210;
+$film_2->addActor('cristian bale');
